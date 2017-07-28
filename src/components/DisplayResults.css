@@ -1,0 +1,7 @@
+.displayresults{
+    padding : 5px;
+
+    display : flex;
+    flex-flow : row wrap;
+    justify-content: space-around;
+}
