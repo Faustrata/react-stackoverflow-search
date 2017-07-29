@@ -11,10 +11,6 @@ class App extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateJsonState = this.updateJsonState.bind(this);
-    this.handleCardClick = this.handleCardClick.bind(this);
-  }
-  handleCardClick(answers){
-    console.log(answers);
   }
   updateJsonState(json){
     console.log(json);

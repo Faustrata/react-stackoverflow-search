@@ -1,0 +1,29 @@
+.fullcard{
+    width : 80%;
+    margin : 10px;
+    border : 1px solid black;
+    padding : 10px;
+}
+.fullcard-title{
+    border-bottom : 1px solid grey;
+    font-size : 1.2em;
+    font-weight : bold;
+}
+.fullcard-title > button{
+    float : right;
+    font-size: 0.5em;
+    font-weight: bold;
+}
+.fullcard-content{
+    overflow: scroll;
+    height : 550px;
+}
+.question-full{
+    padding : 5px;
+    display : flex;
+    flex-flow : row nowrap;
+    border-bottom : 2px solid grey;
+}
+.question-full > *{
+    padding : 10px;
+}

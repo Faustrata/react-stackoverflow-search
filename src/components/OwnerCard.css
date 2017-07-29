@@ -1,0 +1,11 @@
+.owner{
+    align-self: flex-end;
+    display : flex;
+    flex-flow : column;
+}
+.owner > .owner-name{
+    font-size : 0.8em;
+}
+.owner > *{
+    align-self: flex-end;
+}

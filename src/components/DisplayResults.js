@@ -1,11 +1,11 @@
 import React from 'react';
-import QuestionCard from './QuestionCard';
-import './DisplayResults.css'
+import './DisplayResults.css';
+import Card from './Card';
 
 const DisplayResults = (props) => {
   let resultItems = [];
   props.items.map((item,i) => 
-    resultItems.push(<QuestionCard handleCardClick={props.handleCardClick} key={i} {...item}/>)
+    resultItems.push(<Card key={i} item={item}/>)
   )
   return (
     <div className="displayresults">
