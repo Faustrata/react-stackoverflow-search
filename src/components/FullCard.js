@@ -12,6 +12,7 @@ const FullCard = (props) => {
                     <div className="question-body">{ReactHtmlParser(props.body)};</div>
                     <OwnerCard {...props.owner}/>
                 </div>
+                <h3>Answers</h3>
                 <AnswerCard answers={props.answers}/>
             </div>
         </div>
