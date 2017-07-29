@@ -11,6 +11,10 @@ class App extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateJsonState = this.updateJsonState.bind(this);
+    this.handleCardClick = this.handleCardClick.bind(this);
+  }
+  handleCardClick(answers){
+    console.log(answers);
   }
   updateJsonState(json){
     console.log(json);
@@ -24,7 +28,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBox handleSubmit={this.handleSubmit}/>
-        {this.state.sfoJson && <DisplayResults items={sfoJson.items} />}
+        {this.state.sfoJson && <DisplayResults handleCardClick={this.handleCardClick} items={sfoJson.items} />}
       </div>
     );
   }

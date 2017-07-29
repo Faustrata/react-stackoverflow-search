@@ -1,10 +1,11 @@
 import React from 'react';
-import ResultCard from './ResultCard';
+import QuestionCard from './QuestionCard';
 import './DisplayResults.css'
-const SearchBox = (props) => {
+
+const DisplayResults = (props) => {
   let resultItems = [];
   props.items.map((item,i) => 
-    resultItems.push(<ResultCard key={i} {...item}/>)
+    resultItems.push(<QuestionCard handleCardClick={props.handleCardClick} key={i} {...item}/>)
   )
   return (
     <div className="displayresults">
@@ -13,4 +14,4 @@ const SearchBox = (props) => {
       );
 }
 
-export default SearchBox;
+export default DisplayResults;
