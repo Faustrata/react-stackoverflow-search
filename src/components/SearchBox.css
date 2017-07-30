@@ -1,6 +1,11 @@
 .searchbox{
     text-align: center;
 }
-button{
-    height : 20px;
+input[type='submit']{
+    background-color : blue;
+    color :white;
+    height : 30px;
+}
+input[type="text"]{
+    height : 25px;
 }

@@ -11,7 +11,7 @@ class Card extends Component{
         this.handleCardClick = this.handleCardClick.bind(this);
     }
     handleCardClick(answer_count) {
-        console.log(answer_count);
+        //console.log(answer_count);
         this.setState(prevState => (
             prevState.display === "question" ? {
                 display : "answer",
