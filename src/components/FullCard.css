@@ -1,7 +1,5 @@
 .fullcard{
-    width : 80%;
-    margin : 10px;
-    border : 1px solid black;
+    width : 800px;
     padding : 10px;
 }
 .fullcard-title{
@@ -16,7 +14,7 @@
 }
 .fullcard-content{
     overflow: scroll;
-    height : 550px;
+    max-height : 550px;
 }
 .question-full{
     padding : 5px;

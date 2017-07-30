@@ -5,7 +5,9 @@ import ReactHtmlParser from 'react-html-parser';
 
 const AnswerCard = (props) => {
     var answers = [];
-    props.answers.map((answer,i) => {
+    if(props.answer_count > 0)
+    {
+        props.answers.map((answer,i) => {
         const answer_body = answer.body;
         let cname = "answer ";
         if(answer.is_accepted) cname += "answer-accepted";
@@ -15,10 +17,11 @@ const AnswerCard = (props) => {
             <OwnerCard {...answer.owner}/>
         </div>);
         return 1;
-    })
+    })}
     return(
         <div className="answers">
-            {answers}
+            <h3>Answers</h3>
+            {answers.length > 0 ? answers : <h3>No answers yet</h3>}
         </div>
     )
 }

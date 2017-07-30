@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import QuestionCard from './QuestionCard';
 import FullCard from './FullCard';
+import './Card.css'
 class Card extends Component{
     constructor(props){
         super(props);
@@ -9,8 +10,8 @@ class Card extends Component{
         };
         this.handleCardClick = this.handleCardClick.bind(this);
     }
-    handleCardClick(answers) {
-        console.log(answers);
+    handleCardClick(answer_count) {
+        console.log(answer_count);
         this.setState(prevState => (
             prevState.display === "question" ? {
                 display : "answer",

@@ -1,19 +1,41 @@
 .question-card{
-    padding : 5px;
-    margin : 5px;
+    padding : 15px;
     width: 500px;
-    border : 1px solid black;
     display : flex;
     flex-flow : column wrap;
-
 }
+
 .question-card > .card-title{
     font-size : 1em;
+    color : blue;
+    cursor: pointer;
 }
 .question-card > .tags{
     font-size : 0.8em;
 }
 .card-content{
+    padding : 10px;
     display : flex;
-    flex-flow : column wrap;
+    flex-flow : row wrap;
+    justify-content: space-between;
+}
+.score , .answers-count{
+    width : 70px;
+    height : 70px;
+    border-radius : 100%;
+    background-color : #ddd;
+    font-size : 0.9em;
+    display : flex;
+    flex-direction : column;
+}
+.score > * , .answers-count > *{
+    margin-top : 10px;
+    align-self: center;
+}
+.tag{
+    font-size: 0.9em;
+    padding : 5px;
+    margin : 2px;
+    background-color : #8ff;
+    align-self: flex-end;
 }
