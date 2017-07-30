@@ -7,6 +7,8 @@ const FullCard = (props) => {
     return (
         <div className="fullcard">
             <div className="fullcard-title">
+                {//<label><a href={props.link}>...open in stackoverflow.com</a><br/></label> 
+                }  
                 <label className="card-title">{props.title}</label>
                 <button className="btn btn-close" onClick={() => {props.handleCardClick(props.answer_count)}}>X</button>
             </div>

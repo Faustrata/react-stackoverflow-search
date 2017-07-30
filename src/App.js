@@ -13,7 +13,7 @@ class App extends Component {
     this.updateJsonState = this.updateJsonState.bind(this);
   }
   updateJsonState(json){
-    //console.log(json);
+    console.log(json);
     this.setState({sfoJson : json});
   }
   handleSubmit(url){
