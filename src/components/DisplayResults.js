@@ -1,6 +1,12 @@
 import React from 'react';
-import './DisplayResults.css';
 import Card from './Card';
+import glamorous from  'glamorous';
+const Div = glamorous.div({
+  padding : '10px',
+  display : 'flex',
+  flexFlow : 'row wrap',
+  justifyContent : 'center'
+})
 
 const DisplayResults = (props) => {
   let resultItems = [];
@@ -8,9 +14,9 @@ const DisplayResults = (props) => {
     resultItems.push(<Card key={i} item={item}/>)
   )
   return (
-    <div className="displayresults">
+    <Div className="displayresults">
      {resultItems}
-    </div>
+    </Div>
       );
 }
 

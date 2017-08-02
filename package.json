@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^1.0.0",
+    "glamor": "^2.20.37",
+    "glamorous": "^3.25.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-html-parser": "^1.0.3",

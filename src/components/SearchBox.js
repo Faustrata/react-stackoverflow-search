@@ -1,18 +1,32 @@
 import React from 'react';
 import {fetchQuestionsByTagUrl} from '../JsonFetch'
-import './SearchBox.css'
+import glamorous from 'glamorous';
+
+const SearchBoxDiv = glamorous.div({
+  textAlign : 'center'
+})
+const InputSubmit = glamorous.input({
+  backgroundColor : "blue",
+  color : '#fff',
+  height : '30px'
+})
+const InputText = glamorous.input({
+  height : '25px'
+})
+
+
 const SearchBox = (props) => {
   let input;
   return (
-    <div className="searchbox">
+    <SearchBoxDiv>
       <form onSubmit={e =>{
         e.preventDefault();
         props.handleSubmit(fetchQuestionsByTagUrl(input.value));
         }}>
-        <input type="text" name="search" placeholder="Enter tag here" ref={node => input = node} />
-        <input className="btn-search" type="submit" value="Search"/> 
+        <InputText type="text" name="search" placeholder="Enter tag here" ref={node => input = node} />
+        <InputSubmit type="submit" value="Search"/> 
       </form>
-    </div>
+    </SearchBoxDiv>
       );
 }
 
