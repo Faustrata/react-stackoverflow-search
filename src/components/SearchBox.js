@@ -23,7 +23,7 @@ const SearchBox = (props) => {
         e.preventDefault();
         props.handleSubmit(fetchQuestionsByTagUrl(input.value));
         }}>
-        <InputText type="text" name="search" placeholder="Enter tag here" ref={node => input = node} />
+        <InputText type="text" name="search" placeholder="Enter tag here..." ref={node => input = node} />
         <InputSubmit type="submit" value="Search"/> 
       </form>
     </SearchBoxDiv>
