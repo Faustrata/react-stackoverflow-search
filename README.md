@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Steps :
-'npm install'
-'npm start'
+### Steps :
+Inside the project directory,  
+1. `npm install`
+2. `npm start`
