@@ -15,19 +15,30 @@ const InputText = glamorous.input({
 })
 
 
-const SearchBox = (props) => {
-  let input;
-  return (
-    <SearchBoxDiv>
-      <form onSubmit={e =>{
-        e.preventDefault();
-        props.handleSubmit(fetchQuestionsByTagUrl(input.value));
-        }}>
-        <InputText type="text" name="search" placeholder="Enter tag here..." ref={node => input = node} />
-        <InputSubmit type="submit" value="Search"/> 
-      </form>
-    </SearchBoxDiv>
-      );
+class SearchBox extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {value : ""};
+    this._handleChange = this._handleChange.bind(this);
+    this._onSubmit = this._onSubmit.bind(this);
+  }
+  _handleChange(e){
+    this.setState({value : e.target.value});
+  }
+  _onSubmit(e){
+    e.preventDefault();
+    this.props.handleSubmit(fetchQuestionsByTagUrl(this.state.value));
+  }
+  render(){
+    return (
+      <SearchBoxDiv>
+        <form onSubmit={this._onSubmit}>
+          <InputText type="text" value={this.state.value} onChange={this._handleChange} placeholder="Enter tag here..." />
+          <InputSubmit type="submit" value="Search"/> 
+        </form>
+      </SearchBoxDiv>
+        );
+  }
 }
 
 export default SearchBox;
